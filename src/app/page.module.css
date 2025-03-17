@@ -1,0 +1,19 @@
+/* page.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+}
+
+.loading {
+  color: #666;
+  font-size: 18px;
+}

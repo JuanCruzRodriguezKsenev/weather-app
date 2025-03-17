@@ -1,0 +1,166 @@
+/* Header.module.css */
+@keyframes slideIn {
+  from {
+    display: none;
+    translate: 100% 0%;
+  }
+  to {
+    display: block;
+    translate: 0% 0%;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    display: block;
+    translate: 0% 0%;
+  }
+  to {
+    display: none;
+    translate: 100% 0%;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.3em;
+  background-color: #333;
+  height: 10vh;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.headerRight {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  height: 100%;
+}
+
+.userName {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.userMenu {
+  position: absolute;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  height: 100%;
+}
+
+.logOut,
+.loginButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.logOut:hover,
+.loginButton:hover {
+  background-color: #ff1a1a;
+}
+
+/* Existing styles for the dropdown menu and hamburger menu */
+.hambug {
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+}
+
+.hambug:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.1);
+}
+
+.barsContainer {
+  height: 55%;
+  aspect-ratio: 1/1;
+  position: relative;
+  transition: height 1s;
+}
+
+.bar {
+  width: 100%;
+  height: 0.13em;
+  background: white;
+  position: absolute;
+  transition: all 1s;
+}
+
+.bar2 {
+  top: 50%;
+  translate: 0% -50%;
+}
+
+.bar3 {
+  top: 100%;
+  translate: 0% -100%;
+}
+
+.barsContainer.active {
+  width: 70%;
+  height: 0.13em;
+}
+
+.bar1.active {
+  rotate: 45deg;
+}
+
+.bar2.active {
+  opacity: 0;
+}
+
+.bar3.active {
+  top: 0;
+  translate: 0%;
+  rotate: -45deg;
+}
+
+.menuDesplegable {
+  position: absolute;
+  height: 90vh;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+
+  display: none;
+  
+  animation: slideOut 1s;
+}
+
+.menuDesplegable li{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column;
+  gap: 1em;
+}
+.menuDesplegable a {
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 4px 30px rgba(0, 0, 0, 0.373);
+}
+
+.menuDesplegable.active {
+  display: block;
+  animation: slideIn 1s;
+}

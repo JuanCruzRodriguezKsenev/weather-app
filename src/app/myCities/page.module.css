@@ -1,0 +1,64 @@
+/* page.module.css */
+
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.openNewCity {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.openNewCity:hover {
+  background-color: #0056b3;
+}
+
+.searchCity {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #f0f0f0;
+}
+
+.myCities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.myCities p {
+  font-size: 18px;
+  color: #666;
+}
